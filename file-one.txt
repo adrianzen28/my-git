@@ -1,0 +1,5 @@
+This is a file called file-one
+And here are some lines of text
+
+and here are some typos
+The quick brown dox jumper ofer the candle
