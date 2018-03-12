@@ -1,0 +1,149 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  DisplayCopNames: true
+  CacheRootDirectory: tmp
+  TargetRubyVersion: 2.4
+
+Metrics:
+  Enabled: false
+
+# Configured cops
+
+Layout/AlignHash:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+Layout/CaseIndentation:
+  EnforcedStyle: end
+Layout/FirstParameterIndentation:
+  EnforcedStyle: consistent
+Layout/IndentArray:
+  EnforcedStyle: consistent
+Layout/IndentHash:
+  EnforcedStyle: consistent
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+Style/SpecialGlobalVars:
+   EnforcedStyle: use_perl_names
+
+# Partially disabled cops
+
+Lint/UselessAssignment:
+  Exclude:
+    - 'spec/features/**/*'
+
+Naming/FileName:
+  Exclude:
+    - 'spec/features/channels/facebook/add_MFP_direct_page_spec.rb'
+    - 'spec/features/channels/twitter/add_MTH_direct_profile_spec.rb'
+    - 'spec/features/plan_feature_permissions/SLAs_permission_spec.rb'
+
+Naming/MethodName:
+  Exclude:
+    - 'lib/pages/channels/facebook/facebook_admin_page.rb'
+    - 'lib/pages/channels/twitter/twitter_admin_page.rb'
+    - 'spec/support/settings_helper.rb'
+    - 'spec/support/zendesk_facebook_helper.rb'
+
+# Disabled cops
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+Layout/LeadingCommentSpace:
+  Enabled: false
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: false
+Layout/SpaceAfterComma:
+  Enabled: false
+Layout/SpaceAroundOperators:
+  Enabled: false
+Layout/SpaceBeforeBlockBraces:
+  Enabled: false
+Layout/SpaceInLambdaLiteral:
+  Enabled: false
+Layout/SpaceInsideBlockBraces:
+  Enabled: false
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: false
+Lint/BooleanSymbol:
+  Enabled: false
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
+Lint/UnusedBlockArgument:
+  Enabled: false
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+Naming/VariableNumber:
+  Enabled: false
+
+Style/AndOr:
+  Enabled: false
+Style/AsciiComments:
+  Enabled: false
+Style/BlockComments:
+  Enabled: false
+Style/BlockDelimiters:
+  Enabled: false
+Style/BracesAroundHashParameters:
+  Enabled: false
+Style/CommentedKeyword:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/LambdaCall:
+  Enabled: false
+Style/MixinGrouping:
+  Enabled: false
+Style/MultilineIfModifier:
+  Enabled: false
+Style/MultipleComparison:
+  Enabled: false
+Style/NegatedIf:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
+Style/NumericPredicate:
+  Enabled: false
+Style/ParallelAssignment:
+  Enabled: false
+Style/SafeNavigation:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Style/SymbolArray:
+  Enabled: false
+Style/WhileUntilModifier:
+  Enabled: false
+Style/WordArray:
+  Enabled: false
+Style/ZeroLengthPredicate:
+  Enabled: false
